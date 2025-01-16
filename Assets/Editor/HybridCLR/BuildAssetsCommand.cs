@@ -60,7 +60,7 @@ namespace HybridCLR.Editor
                 });
             }
 
-            BuildPipeline.BuildAssetBundles(outputDir, abs.ToArray(), BuildAssetBundleOptions.None, target);
+            BuildPipeline.BuildAssetBundles(outputDir, abs.ToArray(), BuildAssetBundleOptions.ChunkBasedCompression, target);
             AssetDatabase.Refresh(ImportAssetOptions.ForceUpdate);
         }
 
