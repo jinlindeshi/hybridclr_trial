@@ -8,6 +8,7 @@ public class ConsoleToScreen : MonoBehaviour
     private string _logStr = "";
     private Vector2 _scrollPosition;
     public int fontSize = 15;
+    public Font ft;
 
     private void OnEnable()
     {
@@ -60,6 +61,7 @@ public class ConsoleToScreen : MonoBehaviour
         _scrollPosition = GUILayout.BeginScrollView(_scrollPosition, GUIStyle.none, GUIStyle.none);
 
         GUIStyle style = new GUIStyle(GUI.skin.label);
+        style.font = ft;
         style.fontSize = fontSize;
         GUILayout.Label(_logStr, style);
 
